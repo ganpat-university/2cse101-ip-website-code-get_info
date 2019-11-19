@@ -1,0 +1,101 @@
+h1:hover{
+	font-size: 300%;
+	font-family:  "bad-script";
+}
+#psudo::first-letter{
+	color: red;
+	font-size: 120%;
+}
+#abc{
+	color: black;
+	align-content: center;
+	
+	
+	
+}
+#k:hover{
+	height: 8%;
+	width: 3%;
+}
+link{
+	border-radius: 50%;
+}
+#logo{border-radius: 90px;
+	
+	
+  -webkit-transition: width 2s, height 4s; /* For Safari 3.1 to 6.0 */
+  transition: width 2s, height 4s;
+}
+@media only screen and (max-width: 600px) {
+  #logo {
+     background-image: linear-gradient(to right, #0000ff 0%, #66ffcc 100%);
+	  
+  }
+	#logo:hover {
+  width: 100px;
+  height: 100px;
+	
+}
+}
+#logo:hover {
+   width: 150px;
+  height: 150px;
+	
+}
+	
+	
+
+#header {
+  padding: 60px;
+	font-size: 30px;
+	background-image: linear-gradient(to right,black,blue,blue,aqua,white);
+	background-repeat: no-repeat;
+	height: 80%;
+	width: 100%;
+	background-size: 1500px 5000px;
+color: #B3E78F ;
+}
+
+
+h2{
+	background-color:#ddd;
+}
+pre{
+	background-image:linear-gradient(to left,  #ffff66 0%,yellow, #ff9900 );
+	height: inherit;
+	color: hotpink;
+	
+}
+pre:hover{
+	
+	background-image:linear-gradient(to right,  #ffff66 0%,yellow, #ff9900 );
+}
+#spo{
+	background-color:#ffcccc;
+	padding:25px 25px 50px 25px;
+	
+	
+}
+	.spo{	  
+	float:left;} 
+	
+#spo1{
+	background-color: #ccff99;
+	padding:25px 25px 50px 25px;
+}	  
+.spo1{float:right;}
+#spo2{
+	background-color: #e6e6ff;
+	padding:25px 25px 50px 25px;
+}	  
+.spo2{float:left;}
+#spo3{
+	background-color: #ffffb3;
+	padding:25px 25px 50px 25px;
+}	  
+.spo3{float:right;}
+h1
+{
+	text-shadow: 2px 1px 0 ;
+	
+}

@@ -1,0 +1,175 @@
+<html>
+<head>
+	<link rel="shortcut icon" href="logo.png" />
+	<title>Find_Info.gbf</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="external.css"/>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+* {margin: 0; padding: 0;}
+html {
+	height: 100%;
+	background: 
+		linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+}
+
+#msform {
+	width: 400px;
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
+}
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	position: relative;
+}
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+#msform input, #msform textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+#msform .action-button {
+	width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+</style>
+</head>
+<body>
+	<center><div id="header">
+<h1 id="12"><a href="logo.png" target="blank"><img src="logo.png" height="80px" width="80px" id="logo" id="abcd"></a></img><h1 id="abc">Information</h1>
+	</div></center>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Find_Info</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="C:\Users\admin\OneDrive\Desktop\IP section\New folder\GWL.html">Government Website link</a></li>
+      <li><a href="LI.html">Latest Information</a></li>
+		<li><a href="GE.html">Government Exam Info.</a></li>
+		<li><a href="Aboutus.html">About Us</a></li>
+		<li><a href="cont.html">Contact</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="registration.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li class="active"><a href="form2.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+<form id="msform">
+   <fieldset>
+    <h2 class="fs-title">LogIn</h2>
+	   <input type="text" name="email" placeholder="Email" required/>
+    
+	   <em>
+    <input type="password" placeholder="Password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required/>
+    </em>
+	   <button type="submit" value="Submit" class="next action-button">Submit</button>
+  <button type="reset" value="Reset" class="next action-button">Reset</button>
+  </fieldset>
+</form>
+	<div id="message">
+  <h3>Password must contain the following:</h3>
+  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+  <p id="number" class="invalid">A <b>number</b></p>
+  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+</div>
+	<center><h3>Follow On</h3>
+<a href="https://www.instagram.com/javalpatel2728/"><img src="instagram.png" height="32px" width="32px" align="middle" id="k"></img></a>    
+<a href="https://twitter.com/JavalPatel20?s=03"><img src="twitter.png" height="32px" width="32px" align="middle" id="k"></img></a>
+<a href="https://www.youtube.com/channel/UCFYGm4kOaztOMkvZO48l0nw"><img src="youtube.png" height="32px" width="32px" align="middle" id="k"></img></a>
+<a href="https://www.facebook.com/Government-of-India-146431782062573/" ><img src="facebook.png" height="32px" width="32px" align="middle" id="k"></img></a></center><br><br><br>
+	<script>
+var myInput = document.getElementById("psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
+  
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+  
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+</script>
+</body>
+</html>
